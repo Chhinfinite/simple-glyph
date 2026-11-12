@@ -1,0 +1,40 @@
+name: Bug report
+description: Something is broken or the output is wrong
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please attach a minimal reproducible image and hint JSON if possible.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Include the command, expected output, actual output.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Command line, image size, hint JSON, Python version.
+      placeholder: |
+        simple-glyph trace --image ... --hints ... --out ...
+        Python 3.11 / Windows 11
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error / logs
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues.
+          required: true
+        - label: I removed private/sensitive content from attachments.
+          required: true

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/Chhinfinite/simple-glyph#readme
+    about: Read the README and docs first.
+  - name: Security report
+    url: https://github.com/Chhinfinite/simple-glyph/security/advisories/new
+    about: Please report vulnerabilities privately, not in a public issue.

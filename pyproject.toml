@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simple-glyph"
+version = "0.1.0"
+description = "Turn a calligraphy image into ordered, editable stroke centerlines."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Simple Glyph contributors" }]
+keywords = ["calligraphy", "stroke-order", "svg", "vector", "handwriting", "chinese"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Education",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+  "Topic :: Text Processing :: Fonts",
+]
+dependencies = [
+  "numpy>=1.23",
+  "Pillow>=9.0",
+  "scipy>=1.9",
+  "scikit-image>=0.20",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+  "pytest-cov>=4.0",
+  "ruff>=0.1",
+]
+
+[project.scripts]
+simple-glyph = "simple_glyph.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Chhinfinite/simple-glyph"
+Issues = "https://github.com/Chhinfinite/simple-glyph/issues"
+Documentation = "https://github.com/Chhinfinite/simple-glyph#readme"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+simple_glyph = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+# Keep Python 3.9 compatibility: don't force PEP 585/604 rewrites.
+ignore = ["E501", "UP006", "UP035", "UP037", "UP045"]

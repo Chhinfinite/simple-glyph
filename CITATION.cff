@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "简单字迹生成 (simple-glyph)"
+abstract: "Turn a calligraphy image into ordered, editable stroke centerlines."
+authors:
+  - name: "Simple Glyph contributors"
+repository-code: "https://github.com/Chhinfinite/simple-glyph"
+url: "https://github.com/Chhinfinite/simple-glyph"
+license: MIT
+version: "0.1.0"
+date-released: "2026-11-11"
+keywords:
+  - calligraphy
+  - stroke-order
+  - SVG
+  - vectorization
+  - handwriting
